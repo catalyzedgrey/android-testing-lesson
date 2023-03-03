@@ -88,7 +88,7 @@ class TasksFragmentTest {
         // WHEN
         onView(withId(R.id.add_task_fab)).perform(click())
 
-        //THEN 
+        //THEN
         verify(navController).navigate(
             TasksFragmentDirections.actionTasksFragmentToAddEditTaskFragment(
                 null,
