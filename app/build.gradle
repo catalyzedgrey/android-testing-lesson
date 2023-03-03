@@ -30,6 +30,12 @@ android {
     buildFeatures {
         dataBinding true
     }
+
+    testOptions.unitTests {
+        includeAndroidResources = true
+        returnDefaultValues = true
+    }
+
     //Compile-Options Block
     kotlinOptions {
         jvmTarget = "1.8"
@@ -82,6 +88,9 @@ dependencies {
 
     implementation "androidx.fragment:fragment-testing:$fragmentVersion"
     implementation "androidx.test:core:$androidXTestCoreVersion"
+
+    implementation "androidx.test.espresso:espresso-idling-resource:$espressoVersion"
+
 
     // AndroidX Test - Instrumented testing
     androidTestImplementation "junit:junit:$junitVersion"
